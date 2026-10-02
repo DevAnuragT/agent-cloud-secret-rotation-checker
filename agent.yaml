@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: cloud-secret-rotation-checker
+version: 0.1.0
+description: "Checks declared secret age, named ownership, and managed vault reference."
+skills:
+  - cloud-secret-rotation-checker-skill
+tools:
+  - audit-cloud-secret-rotation-checker
+tags:
+  - cloud-security
+  - evidence-driven

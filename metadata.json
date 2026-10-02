@@ -1,0 +1,35 @@
+{
+  "slug": "cloud-secret-rotation-checker",
+  "title": "Cloud Secret Rotation Checker",
+  "category": "cloud-security",
+  "description": "Checks declared secret age, named ownership, and managed vault reference.",
+  "decision": "Checks declared secret age, named ownership, and managed vault reference.",
+  "limitations": "Uses caller-declared evidence only; does not verify external systems, legal requirements, or real-world truth. Human review remains required.",
+  "inputs": "A JSON object containing the documented fields. Numeric thresholds are deterministic and visible in agent.py.",
+  "good": {
+    "maximum_secret_age_days": 60,
+    "vault_reference": "vault://prod/app",
+    "secret_owner": "platform"
+  },
+  "bad": {},
+  "rules": [
+    [
+      "maximum_secret_age_days",
+      "maximum secret age",
+      "max",
+      90
+    ],
+    [
+      "vault_reference",
+      "vault reference",
+      "required",
+      null
+    ],
+    [
+      "secret_owner",
+      "secret owner",
+      "required",
+      null
+    ]
+  ]
+}

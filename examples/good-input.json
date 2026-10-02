@@ -1,0 +1,5 @@
+{
+  "maximum_secret_age_days": 60,
+  "vault_reference": "vault://prod/app",
+  "secret_owner": "platform"
+}
